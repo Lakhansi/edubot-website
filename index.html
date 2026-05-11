@@ -35,34 +35,14 @@
     <a href="privacy.html">Privacy Policy</a><br>
     <a href="terms.html">Terms & Conditions</a>
 
- <!-- Chatbot Widget -->
-<div id="chatbot-root"></div>
-<script>
-  (function() {
-    var script = document.createElement('script');
-    script.src = 'https://repaying-saved-congested.ngrok-free.dev/widget/widget.js';
-    script.onload = function() {
-      if (window.Chatbot) {
-        window.Chatbot.init({
-          apiEndpoint: 'https://repaying-saved-congested.ngrok-free.dev/api/chat',
-          apiKey: '5SsvrqhPgRWGjAPQXwMvAI9PsBgdPR-3euoWlVHOO04',
-          position: 'bottom-right'
-        });
-      } else if (window.initChatbot) {
-        // Legacy support
-        window.initChatbot('5SsvrqhPgRWGjAPQXwMvAI9PsBgdPR-3euoWlVHOO04', {
-          apiEndpoint: 'https://repaying-saved-congested.ngrok-free.dev/api/chat',
-          position: 'bottom-right'
-        });
-      } else {
-        console.error('❌ Chatbot not loaded – check script URL');
-      }
-    };
-    script.onerror = function() {
-      console.error('❌ Failed to load chatbot script from', script.src);
-    };
-    document.head.appendChild(script);
-  })();
-</script>
-</body>
+    <!-- Chatbot Widget -->
+    <div id="chatbot-root"></div>
+    <script src="https://repaying-saved-congested.ngrok-free.dev/widget/widget.js"></script>
+    <script>
+    window.Chatbot.init({
+       apiEndpoint: 'https://repaying-saved-congested.ngrok-free.dev/api/chat',
+       apiKey: '5SsvrqhPgRWGjAPQXwMvAI9PsBgdPR-3euoWlVHOO04',
+       position: 'bottom-right'
+    });
+</script></body>
 </html>
